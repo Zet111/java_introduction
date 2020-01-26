@@ -19,5 +19,24 @@ public class SimpleTypes {
 
         final double PI_PI = 3.1415926535897932384626433832795028841971693993751d;
         System.out.println("Liczba π to " + PI_PI);
+
+        boolean isPaid = false;
+        String isPaidTxt = isPaid ? "tak" : "nie";
+        System.out.println("Czy zapłacono rachunek? " + isPaidTxt);
+        isPaid = !isPaid;
+        isPaidTxt = isPaid ? "tak" : "nie";
+        System.out.println("A może teraz już zapłacono? " + isPaidTxt);
+
+        String name = "Tomasz";
+        if (name.length()>0) {
+            String sex  = (name.toLowerCase().charAt(name.length() - 1) == 'a') ? "kobieta" : "mężczyzna";    //jeśli ostatni znak imienia to a płeć kobieta, w przeciwnym razie mężczyzna
+            System.out.println(name + " to " + sex );
+        }
+
+        int index = 1;
+        char letter = name.charAt(index);
+
+        String prefix = "To";
+        boolean isStartingWith = name.toLowerCase().startsWith(prefix.toLowerCase());
     }
 }
